@@ -1,0 +1,11 @@
+{
+    "name": "ctrl-f5/ctrljs",
+    "description": "CtrlJS",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "ctrl-f5",
+        "zf2",
+	"js"
+    ],
+    "homepage": "http://ctrl-f5.net/"
+}
