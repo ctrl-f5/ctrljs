@@ -1,5 +1,6 @@
 {
     "name": "ctrl-f5/ctrljs",
+    "type": "zend-extra",
     "description": "CtrlJS",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -7,5 +8,8 @@
         "zf2",
 	"js"
     ],
-    "homepage": "http://ctrl-f5.net/"
+    "homepage": "http://ctrl-f5.net/",
+    "require": {
+        "composer/installers": "*"
+    }
 }
