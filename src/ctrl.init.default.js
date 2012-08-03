@@ -10,4 +10,11 @@ $(function () {
         }
         return true;
     });
+
+    $('a.ctrljs-confirm').live('click', function () {
+        CtrlJs.Dialogs.confirm(this, function (trigger) {
+            if ($(trigger).attr('href')) window.location = $(trigger).attr('href');
+        });
+        return false;//cancel the event
+    });
 });
