@@ -17,4 +17,11 @@ $(function () {
         });
         return false;//cancel the event
     });
+
+    $('canvas.ctrljs-3stage-gauge').each(function(index) {
+        $(this).data('ctrlGuage', new CtrlJs.Widgets.threeStageGauge({
+            canvas: this,
+            value: $(this).attr('guage-value')
+        }));
+    });
 });
