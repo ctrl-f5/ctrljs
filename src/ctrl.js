@@ -23,6 +23,22 @@ CtrlJs_Forms.isValid = function (form) {
     return isValid;
 };
 
+CtrlJs_Forms.setValidationPopups = function (elems) {
+    $(elems).each(function () {
+
+        if ($(this).attr('data-validation-msg')) {
+            $(this).popover({
+                trigger: 'focus',
+                selector: this,
+                content: $(this).attr('data-validation-msg'),
+                template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+            });
+            $
+            $(this).popover('show');
+        }
+    });
+};
+
 /**
  * CtrlLib.Forms
  */

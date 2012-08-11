@@ -11,6 +11,8 @@ $(function () {
         return true;
     });
 
+    CtrlJs.Forms.setValidationPopups($('form.ctrljs-validate input'));
+
     $('a.ctrljs-confirm').live('click', function () {
         CtrlJs.Dialogs.confirm(this, function (trigger) {
             if ($(trigger).attr('href')) window.location = $(trigger).attr('href');
@@ -24,4 +26,6 @@ $(function () {
             value: $(this).attr('guage-value')
         }));
     });
+
+    $('form input[type=text]').first().focus();
 });
