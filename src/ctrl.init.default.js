@@ -1,5 +1,5 @@
 $(function () {
-    $('form.ctrljs-validate').live('submit', function () {
+    $('form.ctrljs-validate').on('submit', function () {
         if (CtrlJs.Forms.isValid($(this))) {
             $(this).find('.form-actions .alert').remove();
         } else {
@@ -15,7 +15,7 @@ $(function () {
 
     CtrlJs.Forms.setValidationPopups($('form.ctrljs-validate input'));
 
-    $('a.ctrljs-confirm').live('click', function () {
+    $('a.ctrljs-confirm').on('click', function () {
         CtrlJs.Dialogs.confirm(this, function (trigger) {
             if ($(trigger).attr('href')) window.location = $(trigger).attr('href');
         });

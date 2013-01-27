@@ -45,6 +45,16 @@ CtrlJs_Forms.setValidationPopups = function (elems) {
 function CtrlJs_Dialogs() {}
 CtrlJs.Dialogs = CtrlJs_Dialogs;
 
+
+CtrlJs_Dialogs.newDialog = function (title, content) {
+    var dialog = CtrlJs.Dialogs.newDialogFromElement('<div class="modal"><div class="modal-header"><h3 id="myModalLabel">'+title+'</h3></div><div class="modal-body">'+content+'</div></div>');
+    return dialog;
+};
+CtrlJs_Dialogs.newDialogFromElement = function (element) {
+    var dialog = $(element);
+    dialog.modal('hide');
+    return dialog;
+};
 CtrlJs_Dialogs.confirm = function (trigger, func) {
     if (trigger == undefined) {
         console.log('CtrlJs.Dialogs.confirm() was called without a trigger argument');
